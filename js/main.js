@@ -1,88 +1,92 @@
-(function ($) {
-  "use strict";
+/* =================================
+------------------------------------
+	Cryptocurrency - Landing Page Template
+	Version: 1.0
+ ------------------------------------ 
+ ====================================*/
 
- 
-  // Back to top button
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-      $('.back-to-top').fadeIn('slow');
-    } else {
-      $('.back-to-top').fadeOut('slow');
-    }
-  });
-  $('.back-to-top').click(function(){
-    $('html, body').animate({scrollTop : 0},1500, 'easeInOutQuad');
-    return false;
-  });
 
-  // Initiate the wowjs animation library
-  new WOW().init();
+'use strict';
 
-  // Header scroll class
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-      $('#header').addClass('header-scrolled');
-    } else {
-      $('#header').removeClass('header-scrolled');
-    }
-  });
 
-  if ($(window).scrollTop() > 100) {
-    $('#header').addClass('header-scrolled');
-  }
+$(window).on('load', function() {
+	/*------------------
+		Preloder
+	--------------------*/
+	$(".loader").fadeOut(); 
+	$("#preloder").delay(400).fadeOut("slow");
 
-  // Smooth scroll for the navigation and links with .scrollto classes
-  $('.main-nav a, .mobile-nav a, .scrollto').on('click', function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      if (target.length) {
-        var top_space = 0;
+});
 
-        if ($('#header').length) {
-          top_space = $('#header').outerHeight();
+(function($) {
 
-          if (! $('#header').hasClass('header-scrolled')) {
-            top_space = top_space - 20;
-          }
-        }
+	/*------------------
+		Navigation
+	--------------------*/
+	$('.responsive-bar').on('click', function(event) {
+		$('.main-menu').slideToggle(400);
+		event.preventDefault();
+	});
 
-        $('html, body').animate({
-          scrollTop: target.offset().top - top_space
-        }, 800, 'easeInOutQuad');
 
-        if ($(this).parents('.main-nav, .mobile-nav').length) {
-          $('.main-nav .active, .mobile-nav .active').removeClass('active');
-          $(this).closest('li').addClass('active');
-        }
+	/*------------------
+		Background set
+	--------------------*/
+	$('.set-bg').each(function() {
+		var bg = $(this).data('setbg');
+		$(this).css('background-image', 'url(' + bg + ')');
+	});
 
-        if ($('body').hasClass('mobile-nav-active')) {
-          $('body').removeClass('mobile-nav-active');
-          $('.mobile-nav-toggle i').toggleClass('fa-times fa-bars');
-          $('.mobile-nav-overly').fadeOut();
-        }
-        return false;
-      }
-    }
-  });
+	
+	/*------------------
+		Review
+	--------------------*/
+	var review_meta = $(".review-meta-slider");
+    var review_text = $(".review-text-slider");
 
-  // Navigation active state on scroll
-  var nav_sections = $('section');
-  var main_nav = $('.main-nav, .mobile-nav');
-  var main_nav_height = $('#header').outerHeight();
 
-  $(window).on('scroll', function () {
-    var cur_pos = $(this).scrollTop();
-  
-    nav_sections.each(function() {
-      var top = $(this).offset().top - main_nav_height,
-          bottom = top + $(this).outerHeight();
-  
-      if (cur_pos >= top && cur_pos <= bottom) {
-        main_nav.find('li').removeClass('active');
-        main_nav.find('a[href="#'+$(this).attr('id')+'"]').parent('li').addClass('active');
-      }
+    review_text.on('changed.owl.carousel', function(event) {
+		review_meta.trigger('next.owl.carousel');
+	});
+
+	review_meta.owlCarousel({
+		loop: true,
+		nav: false,
+		dots: true,
+		items: 3,
+		center: true,
+		margin: 20,
+		autoplay: true,
+		mouseDrag: false,
+	});
+
+
+	review_text.owlCarousel({
+		loop: true,
+		nav: true,
+		dots: false,
+		items: 1,
+		margin: 20,
+		autoplay: true,
+		navText: ['<i class="ti-angle-left"><i>', '<i class="ti-angle-right"><i>'],
+		animateOut: 'fadeOutDown',
+    	animateIn: 'fadeInDown',
+	});
+
+
+
+	 /*------------------
+		Contact Form
+	--------------------*/
+    $(".check-form").focus(function () {
+        $(this).next("span").addClass("active");
     });
-  });
+    $(".check-form").blur(function () {
+        if ($(this).val() === "") {
+            $(this).next("span").removeClass("active");
+        }
+    });
 
 
 })(jQuery);
+
