@@ -409,7 +409,8 @@ ol {
 
 .about-text h5 {
 	font-family: "Lato", sans-serif;
-	margin-bottom: 20px;
+    margin-bottom: 20px;
+    line-height: unset;
 }
 
 .about-text p {
@@ -458,9 +459,9 @@ ol {
 	Process Section
 -----------------------*/
 
-.process:last-child .process-step:after {
+/* .process:last-child .process-step:after {
 	display: none;
-}
+} */
 
 .process-step {
 	position: relative;
@@ -485,7 +486,7 @@ ol {
 	margin-bottom: 0;
 }
 
-.process-step:after {
+/* .process-step:after {
 	position: absolute;
 	content: '';
 	width: 275px;
@@ -493,7 +494,7 @@ ol {
 	top: -40px;
 	right: -40%;
 	background: url("../img/process-line.png") no-repeat scroll 0 0/cover;
-}
+} */
 
 /*---------------------
 	Fact Section
@@ -946,10 +947,14 @@ ol {
 	display: inline-block;
 }
 
-.footer-nav li a {
+.footer-nav li a{
 	color: #75849a;
 	font-size: 14px;
 	margin-left: 20px;
+}
+.footer-left{
+	color: #75849a;
+	font-size: 14px;
 }
 
 /*---------------------
@@ -1532,7 +1537,7 @@ ol {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 	.header-section {
-		padding: 30px 15px 0;
+		padding: 10px 15px 0;
 	}
 	.menu-list li a {
 		margin-right: 6px;
@@ -1637,7 +1642,7 @@ ol {
 
 @media only screen and (max-width: 767px) {
 	.header-section {
-		padding: 30px 0;
+		padding: 10px 0;
 		background: #fff;
 	}
 	.header-section .responsive-bar {
@@ -1817,4 +1822,14 @@ ol {
 	.comment .comment-content {
 		padding-left: 0;
 	}
+}
+
+/*----------------------------------------*/
+/* Akbr's CSS
+/*----------------------------------------*/
+.site-logo{
+	color:white;
+}
+.site-logo img{
+	float:left
 }
