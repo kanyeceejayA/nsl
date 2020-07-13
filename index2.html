@@ -42,7 +42,7 @@
 	<header class="header-section clearfix">
 		<div class="container-fluid">
 			<a href="index.html" class="site-logo">
-				<img src="img/nsl-logo-60.png" alt="">
+				<img src="img/nsl-logo.png" alt="" width="65">
 				
 			</a>
 			<div class="responsive-bar"><i class="fa fa-bars"></i></div>
@@ -50,11 +50,10 @@
 			<a href="" class="site-btn">Contact Us</a>
 			<nav class="main-menu">
 				<ul class="menu-list">
-					<li><a href="">Solution</a></li>
-					<li><a href="">Features</a></li>
-					<li><a href="">News</a></li>
-					<li><a href="">About</a></li>
-					<li><a href="">Contact</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#vision">Vision</a></li>
+					<li><a href="#services">Services</a></li>
+					<li><a href="contact">Contact</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -96,7 +95,8 @@
 				</div>
 			</div>
 			<div class="about-img">
-				<img src="img/about-img.png" alt="">
+				<!-- <img src="img/about-img.png" alt=""> -->
+				<img src="img/nsl-logo.png" alt="">
 			</div>
 		</div>
 	</section>
@@ -104,12 +104,8 @@
 
 
 	<!-- Vision & Mission section -->
-	<section class="features-section spad gradient-bg">
+	<section class="features-section spad gradient-bg" id="vision">
 		<div class="container text-white">
-			<div class="section-title text-center">
-				<h2>Our Services</h2>
-				<p>NSL offers numerous services that our clients value.</p>
-			</div>
 			<div class="row">
 				<!-- feature -->
 				<div class="col-md-6 col-lg-3 feature">
@@ -128,7 +124,7 @@
 					</div>
 				</div>
 				<!-- feature -->
-				<div class="col-md-6 col-lg-2 feature">
+				<div class="col-md-6 col-lg-3 feature">
 					<i class="ti-wallet"></i>
 					<div class="feature-content">
 						<h4>Core Values</h4>
@@ -141,11 +137,11 @@
 			</div>
 		</div>
 	</section>
-	<!-- Features section end -->
+	<!-- vision section end -->
 
 
-	<!-- Process section -->
-	<section class="process-section spad">
+	<!-- Services section -->
+	<section class="process-section spad" id="services">
 		<div class="container">
 			<div class="section-title text-center">
 				<h2>Our Services</h2>
@@ -216,7 +212,7 @@
 			</div>
 		</div>
 	</section>
-	<!-- Process section end -->
+	<!-- services section end -->
 
 
 	<!-- Fact section -->
@@ -306,7 +302,7 @@
 	<!-- Review section end -->
 
 
-	<!-- Newsletter section -->
+	<!-- Contact section -->
 	<section class="newsletter-section gradient-bg">
 		<div class="container text-white">
 			<div class="row">
@@ -320,7 +316,7 @@
 			</div>
 		</div>
 	</section>
-	<!-- Newsletter section end -->
+	<!-- Contact section end -->
 
 
 
@@ -388,10 +384,13 @@
 		</div>
 	</footer>
 
+		<a onclick="topFunction()" id="TopBtn" title="Go to top"><img src="img/top.png" class="img-fluid"></button>
+
 
 	<!--====== Javascripts & Jquery ======-->
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/easing.min.js"></script>
 </body>
 </html>
