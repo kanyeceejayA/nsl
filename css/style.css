@@ -803,77 +803,6 @@ ol {
 	.hero-text h2 {
 		font-size: 45px;
 	}
-	.process-step:after {
-		width: 154px;
-		height: 35px;
-		top: -10px;
-		right: -44%;
-		background-size: contain;
-	}
-	.about-img {
-		position: relative;
-		display: block;
-		left: 0;
-		width: auto;
-		margin-top: 50px;
-	}
-	.member {
-		width: calc(33.333333% - 25px);
-		margin-bottom: 30px;
-		padding: 35px 10px;
-	}
-	.member-img {
-		width: 160px;
-		height: 160px;
-	}
-	.member-info {
-		padding: 50px 27px 10px;
-		height: 275px;
-	}
-	.member-social a {
-		margin: 0 5px;
-	}
-	.team-members {
-		text-align: center;
-	}
-	.fact {
-		margin-bottom: 30px;
-	}
-	.pull-3 {
-		right: 0;
-	}
-	.push-8 {
-		left: 0;
-	}
-	.review-section {
-		text-align: center;
-	}
-	.review-text {
-		padding: 0 60px;
-	}
-	.review-text-slider .owl-nav {
-		padding-top: 0;
-		position: absolute;
-		top: 50%;
-		margin-top: -45px;
-		left: 0;
-		width: 100%;
-	}
-	.review-text-slider .owl-prev {
-		float: left;
-	}
-	.review-text-slider .owl-next {
-		float: right;
-	}
-	.review-meta-slider {
-		margin: auto;
-	}
-	.author-meta {
-		padding-top: 0;
-	}
-	.newsletter-form {
-		padding-left: 0;
-	}
 	.footer-widget {
 		margin-bottom: 30px;
 	}
@@ -894,13 +823,6 @@ ol {
 		font-size: 25px;
 		display: block;
 		cursor: pointer;
-	}
-	.header-section .user {
-		float: right;
-		font-size: 25px;
-		color: #333;
-		margin-right: 20px;
-		display: block;
 	}
 	.main-menu {
 		float: none;
@@ -943,128 +865,14 @@ ol {
 	.page-info-section h2 {
 		font-size: 40px;
 	}
-	.about-img {
-		position: relative;
-		display: block;
-		left: 0;
-		width: auto;
-		margin-top: 50px;
-	}
-	.team-members {
-		margin: 0;
-		padding: 0 15px;
-	}
-	.member {
-		width: 100%;
-		margin-bottom: 30px;
-		margin-left: 0;
-	}
-	.fact {
-		margin-bottom: 30px;
-	}
-	.process-step:after {
-		display: none;
-	}
-	.pull-3 {
-		right: 0;
-	}
-	.push-8 {
-		left: 0;
-	}
-	.review-section {
-		text-align: center;
-	}
-	.review-text {
-		padding: 0 60px;
-	}
-	.review-text-slider .owl-nav {
-		padding-top: 0;
-		position: absolute;
-		top: 50%;
-		margin-top: -45px;
-		left: 0;
-		width: 100%;
-	}
-	.review-text-slider .owl-prev {
-		float: left;
-	}
-	.review-text-slider .owl-next {
-		float: right;
-	}
-	.review-meta-slider {
-		margin: auto;
-	}
-	.author-meta {
-		padding-top: 0;
-	}
 	.header-section .site-btn {
 		display: none;
-	}
-	.newsletter-form {
-		padding-left: 0;
 	}
 	.newsletter-section {
 		text-align: center;
 	}
-	.review-text p {
-		font-size: 20px;
-	}
-	.blog-item {
-		margin-bottom: 30px;
-	}
 	.footer-widget {
 		margin-bottom: 30px;
-	}
-	.single-blog-page .social-share {
-		text-align: left;
-		margin-top: 20px;
-	}
-}
-
-/* small Mobile :320px. */
-
-@media only screen and (max-width: 479px) {
-	.review-text {
-		padding: 0 45px;
-	}
-	.review-text p {
-		font-size: 18px;
-	}
-	.newsletter-form input {
-		padding-right: 30px;
-	}
-	.newsletter-form button {
-		position: relative;
-		padding: 14px;
-		border-radius: 50px;
-		margin-top: 23px;
-	}
-	.review-text-slider .owl-prev,
-	.review-text-slider .owl-next {
-		width: 40px;
-		height: 40px;
-		font-size: 18px;
-	}
-	.review-meta-slider {
-		width: auto;
-	}
-	.member-img {
-		width: 180px;
-		height: 180px;
-	}
-	.member-info {
-		padding: 50px 20px 10px;
-		height: 320px;
-	}
-	.blog-text {
-		padding: 15px;
-	}
-	.comment .comment-avator {
-		float: none;
-		margin-bottom: 20px;
-	}
-	.comment .comment-content {
-		padding-left: 0;
 	}
 }
 
