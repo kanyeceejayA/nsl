@@ -15,8 +15,6 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="css/font-awesome.min.css"/>
 		<link rel="stylesheet" href="css/themify-icons.css"/>
-		<link rel="stylesheet" href="css/animate.css"/>
-		<link rel="stylesheet" href="css/owl.carousel.css"/>
 		<link rel="stylesheet" href="css/style.css"/>
 		
 		<link href="favicon.ico" rel="shortcut icon"/>
@@ -34,9 +32,9 @@
 	</head>
 <body>
 	<!-- Page Preloder -->
-	<div id="preloder">
+	<!-- <div id="preloder">
 		<div class="loader"></div>
-	</div>
+	</div> -->
 
 	<!-- Header section -->
 	<header class="header-section clearfix">
@@ -98,7 +96,7 @@
 									<label>How Can We Help You?*</label>
 									<select id="EnquiryType" name="EnquiryType" class="styleSelBox input-name " placeholder="Select an option" required>
 										<option value="">Select an option</option>
-										<option value="Advisory services" >Advisory services</option>
+										<option value="Advisory services">Advisory services</option>
 										<option value="Assurance services" >Assurance services</option>
 										<option value="Tax services" >Tax services</option>
 										<option value="Press &amp; media " >Press &amp; media </option>
@@ -156,11 +154,12 @@
                                 <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
                                 <small class="copy">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.</small>
 							</div>
-							<div class="col-md-12">
-								<button class="site-btn sb-gradients mt-4">Submit form</button>
+							<div class="col-md-12 pt-2">
+								<button id="submit"></button>
 							</div>
 							<div class="col-md-12" style="margin-top: 1em;">
 								<div id="messages"></div>
+								
 							</div>
 						</div>
 					</form>
@@ -169,7 +168,7 @@
 		</div>
 	</section>
 	<!-- Contact section end -->
-
+	
 		<!-- Newsletter section -->
 		<section class="newsletter-section gradient-bg">
 			<div class="container text-white">
@@ -194,10 +193,7 @@
 			</div>
 		</div>
 	</section>
-	<!-- Contact section end -->
-
-
-
+	<!-- map section end -->
 
 
 	<!-- Footer section -->
@@ -269,13 +265,102 @@
 	
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-	<!-- <script src="js/jquery-3.2.1.min.js"></script> -->
-	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/main.js"></script>
 
 
 	<script src="https://www.google.com/recaptcha/api.js?render=6Lfv97AZAAAAADPEzmlwpehcmERSSwnrB-PNpuTn"></script>
 	<script src="contactform/contactform.js"></script>
+	
+	<style>
+				
+		#submit {
+		outline: none;
+		height: 40px;
+		text-align: center;
+		width: 130px;
+		border-radius: 40px;
+		background: #fff;
+		border: 2px solid #1ECD97;
+		color: #1ECD97;
+		letter-spacing: 1px;
+		text-shadow: 0;
+		font-size: 12px;
+		font-weight: bold;
+		cursor: pointer;
+		-webkit-transition: all 0.25s ease;
+		transition: all 0.25s ease;
+		}
+		#submit:hover {
+		color: white;
+		background: #1ECD97;
+		}
+		#submit:active {
+		letter-spacing: 2px;
+		}
+		#submit:after {
+		content: "SUBMIT";
+		}
+
+		#submit.onclick {
+		width: 40px;
+		border-color: #bbbbbb;
+		border-width: 3px;
+		font-size: 0;
+		border-left-color: #1ECD97;
+		-webkit-animation: rotating 2s 0.25s linear infinite;
+				animation: rotating 2s 0.25s linear infinite;
+		}
+		#submit.onclick:after {
+		content: "";
+		}
+		#submit.onclick:hover {
+		color: #1ECD97;
+		background: white;
+		}
+
+		#submit.done {
+		font-size: 13px;
+		color: white;
+		background: #1ECD97;
+		}
+		#submit.done:after {
+		font-family: 'FontAwesome';
+		content: "\f00c";
+		}
+
+		#submit.fail {
+		font-size: 13px;
+		color: white;
+		background: #cd1e2d;
+		}
+		#submit.fail:after {
+		font-family: 'FontAwesome';
+		content: "\f00d";
+		}
+
+		@-webkit-keyframes rotating {
+		from {
+			-webkit-transform: rotate(0deg);
+					transform: rotate(0deg);
+		}
+		to {
+			-webkit-transform: rotate(360deg);
+					transform: rotate(360deg);
+		}
+		}
+
+		@keyframes rotating {
+		from {
+			-webkit-transform: rotate(0deg);
+					transform: rotate(0deg);
+		}
+		to {
+			-webkit-transform: rotate(360deg);
+					transform: rotate(360deg);
+		}
+		}
+
+	</style>
 
 </body>
 </html>

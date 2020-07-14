@@ -1,16 +1,23 @@
 <?php
 include('env.php');
 
+// sleep('10');
+
 function url_get_contents ($url) {
+    if($_SERVER["HTTP_HOST"] == "nimble.local"){
+        return file_get_contents($url);
+    }
 	if (!function_exists('curl_init')){
-		return file_get_contents($url);
-	}
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, $url);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	$output = curl_exec($ch);
-	curl_close($ch);
-	return $output;
+		die;
+    }
+    else{
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $output = curl_exec($ch);
+        curl_close($ch);
+        return $output;
+    }
 }
 
 // Build POST request:
