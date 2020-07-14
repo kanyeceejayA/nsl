@@ -3,7 +3,7 @@ include('env.php');
 
 function url_get_contents ($url) {
 	if (!function_exists('curl_init')){
-		die('CURL is not installed!');
+		return file_get_contents($url);
 	}
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL, $url);
@@ -19,8 +19,9 @@ $recaptcha_secret = env('secret');
 $recaptcha_response = $_POST['recaptcha_response'];
 
 //SWITCH THIS TO FILE_GET_CONTENTS IF ON LOCALHOST!!!
+//the instruction above isnt needed anymore. updated url_get_contents to account for that. Akbr, 14/07/2020
 // Make and decode POST request:
-$recaptcha = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
+$recaptcha = url_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
 $recaptcha = json_decode($recaptcha);
 
 /*
