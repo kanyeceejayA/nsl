@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>Cryptocurrency - Landing Page Template</title>
-	<meta charset="UTF-8">
-	<meta name="description" content="Cryptocurrency Landing Page Template">
-	<meta name="keywords" content="cryptocurrency, unica, creative, html">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Favicon -->
-	<link href="img/favicon.ico" rel="shortcut icon"/>
-
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="css/themify-icons.css"/>
-	<link rel="stylesheet" href="css/owl.carousel.css"/>
-	<link rel="stylesheet" href="css/style.css"/>
-
-
-	<!--[if lt IE 9]>
-	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
-
-</head>
+	<head>
+		<title>Contact Us | NSL - Best Financial Consultancy firm in the region</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="NSL : Best Financial Consultancy Firm in the region">
+		<meta name="keywords" content="cryptocurrency, unica, creative, html">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Favicon -->
+		
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" href="css/themify-icons.css"/>
+		<link rel="stylesheet" href="css/animate.css"/>
+		<link rel="stylesheet" href="css/owl.carousel.css"/>
+		<link rel="stylesheet" href="css/style.css"/>
+		
+		<link href="favicon.ico" rel="shortcut icon"/>
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+	
+	
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	
+	</head>
 <body>
 	<!-- Page Preloder -->
 	<div id="preloder">
@@ -36,18 +42,18 @@
 	<header class="header-section clearfix">
 		<div class="container-fluid">
 			<a href="index.html" class="site-logo">
-				<img src="img/logo.png" alt="">
+				<img src="img/nsl-logo.png" alt="" width="65">
+				
 			</a>
 			<div class="responsive-bar"><i class="fa fa-bars"></i></div>
 			<a href="" class="user"><i class="fa fa-user"></i></a>
-			<a href="" class="site-btn">Sign Up Free</a>
+			<a href="#contact" class="site-btn">Get in Touch</a>
 			<nav class="main-menu">
 				<ul class="menu-list">
-					<li><a href="">Solution</a></li>
-					<li><a href="">Features</a></li>
-					<li><a href="">News</a></li>
-					<li><a href="">About</a></li>
-					<li><a href="">Contact</a></li>
+					<li><a href="/">Home</a></li>
+					<li><a href="/#about">About</a></li>
+					<li><a href="/#vision">Vision</a></li>
+					<li><a href="/#services">Services</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -67,67 +73,124 @@
 		</div>
 	</section>
 	<!-- Page info end -->
-
-
+	<style>
+		label{
+			display: block;
+		}
+	</style>
 
 	<!-- Contact section -->
-	<section class="contact-page spad">
+	<section class="contact-page spad" id="contact">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-7">
-					<form class="contact-form">
+				<div class="col-md-12 pb-4">
+					<div>
+						<h5>Thank you for your interest in NSL.<br>Whatever your enquiry, we'll help direct you to the appropriate place.</h5>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<form class="contact-form" id="contact-form" action="contactform/contactform.php" method="post">
 						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									<input class="check-form" type="text" placeholder="First Name*:">
-									<span><i class="ti-check"></i></span>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<input class="check-form" type="text" placeholder="Last Name*:">
-									<span><i class="ti-check"></i></span>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<input class="check-form" type="text" placeholder="Email Adress*:">
-									<span><i class="ti-check"></i></span>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<input class="check-form" type="text" placeholder="Phone Number*:">
-									<span><i class="ti-check"></i></span>
-								</div>
-							</div>
+
 							<div class="col-md-12">
 								<div class="form-group">
-									<textarea placeholder="Tell us about your question!"></textarea>
+									<label>How Can We Help You?*</label>
+									<select id="EnquiryType" name="EnquiryType" class="styleSelBox input-name " placeholder="Select an option" required>
+										<option value="">Select an option</option>
+										<option value="Advisory services" >Advisory services</option>
+										<option value="Assurance services" >Assurance services</option>
+										<option value="Tax services" >Tax services</option>
+										<option value="Press &amp; media " >Press &amp; media </option>
+										<option value="Publications &amp; marketing materials" >Publications &amp; marketing materials</option>
+										<option value="Recruitment" >Recruitment</option>
+					
+									</select>
+									<span><i class="ti-check"></i></span>
 								</div>
-								<h5 class="mb-3">Way to Contacts<span>*</span>:</h5>
-								<div class="contact-type">
-									<label class="ct-label">Phone
-										<input type="radio" name="radio">
-										 <span class="checkmark"></span>
-									</label>
-									<label class="ct-label">Email
-										<input type="radio" name="radio">
-										 <span class="checkmark"></span>
-									</label>
-									<label class="ct-label">Other
-										<input type="radio" name="radio">
-										 <span class="checkmark"></span>
-									</label>
-								</div>
+							</div>
 
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>What is your name?*</label>
+									<input class="check-form" type="text" placeholder="name" name="name" required>
+									<span><i class="ti-check"></i></span>
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>What is the Name of your Company?</label>
+									<input class="check-form" type="text" placeholder="Company" name="company">
+									<span><i class="ti-check"></i></span>
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>What is your Email Address?*</label>
+									<input class="check-form" type="email" placeholder="Email*:" name="email" required>
+									<span><i class="ti-check"></i></span>
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>What is your Phone Number?</label>
+									<input class="check-form" type="text" placeholder="Phone No*:" name="phone">
+									<span><i class="ti-check"></i></span>
+								</div>
+							</div>
+
+							
+
+							<div class="col-md-12">
+								<div class="form-group">
+									<label>Do you want to leave us a message?</label>
+									<textarea placeholder="What would you like to say/ask?" name="message" rows="4"></textarea>
+									<span><i class="ti-check"></i></span>
+								</div>
+							</div>
+
+							<div class="col-md-12">
+                                <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+                                <small class="copy">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.</small>
+							</div>
+							<div class="col-md-12">
 								<button class="site-btn sb-gradients mt-4">Submit form</button>
+							</div>
+							<div class="col-md-12" style="margin-top: 1em;">
+								<div id="messages"></div>
 							</div>
 						</div>
 					</form>
 				</div>
-				<div class="col-lg-5 mt-5 mt-lg-0">
-					<div class="map" id="map-canvas"></div>
+			</div>
+		</div>
+	</section>
+	<!-- Contact section end -->
+
+		<!-- Newsletter section -->
+		<section class="newsletter-section gradient-bg">
+			<div class="container text-white">
+				<div class="row">
+					<div class="col-lg-7 newsletter-text">
+						<h2>Our Location</h2>
+						<p>NSL is Located along Bukoto-Ntinda Road, at Mariam Nabusi Arcade.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Newsletter section end -->
+
+
+	<!-- Map section -->
+	<section class="contact-page spad" id="contact2" style="padding-top:6em;border-bottom:1px solid #ebebeb;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mt-5 mt-lg-0">
+					<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15958.975572735417!2d32.6021072!3d0.3499673!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8499e7568609fd3e!2sSilbaka%20Investments%20Ltd!5e0!3m2!1sen!2sug!4v1594659092641!5m2!1sen!2sug" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 				</div>
 			</div>
 		</div>
@@ -135,24 +198,7 @@
 	<!-- Contact section end -->
 
 
-	<!-- Newsletter section -->
-	<section class="newsletter-section gradient-bg">
-		<div class="container text-white">
-			<div class="row">
-				<div class="col-lg-7 newsletter-text">
-					<h2>Subscribe to our Newsletter</h2>
-					<p>Sign up for our weekly industry updates, insider perspectives and in-depth market analysis.</p>
-				</div>
-				<div class="col-lg-5 col-md-8 offset-lg-0 offset-md-2">
-					<form class="newsletter-form">
-						<input type="text" placeholder="Enter your email">
-						<button>Get Started</button>
-					</form>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Newsletter section end -->
+
 
 
 	<!-- Footer section -->
@@ -160,55 +206,57 @@
 		<div class="container">
 			<div class="row spad">
 				<div class="col-md-6 col-lg-3 footer-widget">
-					<img src="img/logo.png" class="mb-4" alt="">
-					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese mollit anim id est laborum.</p>
-					<span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></span>
+					<img src="img/nsl-logo-60.png" class="mb-4" alt="">
+					<p>NSL, and the NSL logo are all registered trademarks of NSL. </p>
 				</div>
 				<div class="col-md-6 col-lg-2 offset-lg-1 footer-widget">
-					<h5 class="widget-title">Resources</h5>
+					<h5 class="widget-title">Services</h5>
 					<ul>
-						<li><a href="#">How to Buy Coin</a></li>
-						<li><a href="#">Coin Overview</a></li>
-						<li><a href="#">Blog News</a></li>
-						<li><a href="#">How to Sell Coin</a></li>
-						<li><a href="#">Purchase Theme</a></li>
+						<li><a href="#">Financial Planning</a></li>
+						<li><a href="#">Investment Planning</a></li>
+						<li><a href="#">Retirement Planning</a></li>
+						<li><a href="#">Wealth Management</a></li>
+						<li><a href="#">Tax Consultancy</a></li>
 					</ul>
 				</div>
 				<div class="col-md-6 col-lg-2 offset-lg-1 footer-widget">
 					<h5 class="widget-title">Quick Links</h5>
 					<ul>
-						<li><a href="#">Network Stats</a></li>
-						<li><a href="#">Block Explorers</a></li>
-						<li><a href="#">Governance</a></li>
-						<li><a href="#">Exchange Markets</a></li>
-						<li><a href="#">Get Theme</a></li>
+						<li><a href="https://silbaka.com/webmail" target="_blank">web mail </a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="contact">Contact Us</a></li>
+						<li><a href="#">Services</a></li>
 					</ul>
 				</div>
 				<div class="col-md-6 col-lg-3 footer-widget pl-lg-5 pl-3">
 					<h5 class="widget-title">Follow Us</h5>
+					<p>
+						Mariam Nabusi Arcade<br>
+						Plot 925, Bukoto-Ntinda Road<br>
+						Kampala, Uganda<br>
+						<strong>Phone:</strong> +256 756 951 865 <br>
+						<strong>Email:</strong> nsl@silbaka.com<br>
+					  </p>
 					<div class="social">
-						<a href="" class="facebook"><i class="fa fa-facebook"></i></a>
-						<a href="" class="google"><i class="fa fa-google-plus"></i></a>
+						<a href="http://fb.com/nslug" class="facebook"><i class="fa fa-facebook"></i></a>
+						<a href="https://twitter.com/nsl_ug" class="twitter"><i class="fa fa-twitter"></i></a>
+						<a href="mailto:nsl@silbaka.com" class="google"><i class="fa fa-email"></i></a>
 						<a href="" class="instagram"><i class="fa fa-instagram"></i></a>
-						<a href="" class="twitter"><i class="fa fa-twitter"></i></a>
 					</div>
 				</div>
 			</div>
 			<div class="footer-bottom">
 				<div class="row">
-					<div class="col-lg-4 store-links text-center text-lg-left pb-3 pb-lg-0">
-						<a href=""><img src="img/appstore.png" alt="" class="mr-2"></a>
-						<a href=""><img src="img/playstore.png" alt=""></a>
+					<div class="col-lg-4 text-center text-lg-left footer-left">
+						<span>
+							Copyright &copy;<script>document.write(new Date().getFullYear());</script> | built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://studio.rtl.ug" target="_blank">RTL ug</a>
+						</span>
 					</div>
 					<div class="col-lg-8 text-center text-lg-right">
 						<ul class="footer-nav">
-							<li><a href="">DPA</a></li>
-							<li><a href="">Terms of Use</a></li>
 							<li><a href="">Privacy Policy </a></li>
-							<li><a href="">support@company.com</a></li>
-							<li><a href="">(123) 456-7890</a></li>
+							<li><a href="mailto:nsl@silbaka.com">nsl@silbaka.com</a></li>
+							<li><a href="tel:+256756951865">+256 756 951 865</a></li>
 						</ul>
 					</div>
 				</div>
@@ -216,17 +264,20 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		</div>
 	</footer>
 
+		<a onclick="topFunction()" id="TopBtn" title="Go to top"><img src="img/top.png" class="img-fluid"></button>
+
 
 	<!--====== Javascripts & Jquery ======-->
-	<script src="js/jquery-3.2.1.min.js"></script>
+	
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+	<!-- <script src="js/jquery-3.2.1.min.js"></script> -->
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/main.js"></script>
 
 
-
-	<!-- load for map -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0YyDTa0qqOjIerob2VTIwo_XVMhrruxo"></script>
-	<script src="js/map.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js?render=6Lfv97AZAAAAADPEzmlwpehcmERSSwnrB-PNpuTn"></script>
+	<script src="contactform/contactform.js"></script>
 
 </body>
 </html>

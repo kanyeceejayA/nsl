@@ -24,7 +24,142 @@
 	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
+		<style>
+						
 
+			/*---------------------
+				Team Section
+			-----------------------*/
+
+			.team-section {
+				background: #f3f7f9;
+				overflow: hidden;
+			}
+
+			.team-members {
+				margin: 0 -10px;
+			}
+
+			.member {
+				background: #fff;
+				width: calc(20% - 25px);
+				display: inline-block;
+				margin: 0 10px;
+				text-align: center;
+				padding: 50px 10px;
+				-webkit-box-shadow: 1px 1px 1px rgba(33, 54, 61, 0.15);
+						box-shadow: 1px 1px 1px rgba(33, 54, 61, 0.15);
+				border-radius: 10px;
+				position: relative;
+			}
+
+			.member h2 {
+				font-size: 22px;
+				margin-bottom: 5px;
+			}
+
+			.member span {
+				font-size: 14px;
+				color: #75849a;
+				display: block;
+			}
+
+			.member .member-text {
+				-webkit-transition: all 0.4s;
+				-o-transition: all 0.4s;
+				transition: all 0.4s;
+				opacity: 1;
+			}
+
+			.member:hover {
+				-webkit-box-shadow: 1px 14px 43px rgba(33, 54, 61, 0.15);
+						box-shadow: 1px 14px 43px rgba(33, 54, 61, 0.15);
+			}
+
+			.member:hover .member-info {
+				opacity: 1;
+			}
+
+			.member:hover .member-text {
+				opacity: 0;
+			}
+
+			.member-img {
+				width: 230px;
+				height: 230px;
+				display: inline-block;
+				border-radius: 50%;
+				margin-bottom: 25px;
+			}
+
+			.member-social {
+				padding-top: 25px;
+				background: #fff;
+				position: relative;
+				z-index: 2;
+			}
+
+			.member-social a {
+				width: 50px;
+				height: 50px;
+				display: inline-block;
+				border-radius: 50%;
+				background: #cbd3df;
+				color: #fff;
+				padding-top: 13px;
+				margin: 0 8px;
+			}
+
+			.member-meta {
+				padding-left: 85px;
+			}
+
+			.member-info {
+				padding: 50px 60px 10px;
+				position: absolute;
+				width: 100%;
+				top: 0;
+				left: 0;
+				text-align: left;
+				opacity: 0;
+				-webkit-transition: all 0.4s;
+				-o-transition: all 0.4s;
+				transition: all 0.4s;
+				height: 380px;
+				overflow-y: auto;
+			}
+
+			.member-info p {
+				display: block;
+				padding-top: 25px;
+				margin-bottom: 0;
+			}
+
+			.member-img.mf {
+				width: 60px;
+				height: 60px;
+				opacity: 1;
+				float: left;
+				margin-bottom: 0;
+			}
+			@media (min-width: 1199px) and (max-width: 1390px) {
+				.member {
+					padding: 35px 10px;
+				}
+				.member-img {
+					width: 160px;
+					height: 160px;
+				}
+				.member-info {
+					padding: 50px 27px 10px;
+					height: 275px;
+				}
+				.member-social a {
+					margin: 0 5px;
+				}
+			}
+
+		</style>
 </head>
 <body>
 	<!-- Page Preloder -->
