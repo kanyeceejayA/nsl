@@ -502,6 +502,15 @@ ol {
 	margin-bottom: 0;
 }
 
+/* EXPERTISE */
+.expertise ul{
+	padding-inline-start: 40px;
+}
+.expertise li{
+	font-size: 16px;
+    color: #75849a;
+    line-height: 1.6;
+}
 /*---------------------
 	Footer Section
 -----------------------*/
