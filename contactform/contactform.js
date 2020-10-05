@@ -7,7 +7,12 @@ $(function () {
     // $('#contact-form').validator();
 
 
-
+    grecaptcha.ready(function () {
+        grecaptcha.execute('6Lfv97AZAAAAADPEzmlwpehcmERSSwnrB-PNpuTn', { action: 'contact' }).then(function (token) {
+            var recaptchaResponse = document.getElementById('recaptchaResponse');
+            recaptchaResponse.value = token;
+        });
+    });
 
     // when the form is submitted
     $('#contact-form').on('submit', function (e) {
@@ -17,12 +22,7 @@ $(function () {
      
         e.preventDefault();
 
-        grecaptcha.ready(function () {
-            grecaptcha.execute('6Lfv97AZAAAAADPEzmlwpehcmERSSwnrB-PNpuTn', { action: 'contact' }).then(function (token) {
-                var recaptchaResponse = document.getElementById('recaptchaResponse');
-                recaptchaResponse.value = token;
-            });
-        });
+        
         
 
         var url = "contactform/contactform.php";
@@ -76,4 +76,8 @@ function callbacksubmit() {
         $( "#submit" ).removeClass( "done" );
         $( "#submit" ).removeClass( "fail" );
     }, 1500 );
+    grecaptcha.execute('6Lfv97AZAAAAADPEzmlwpehcmERSSwnrB-PNpuTn', { action: 'contact' }).then(function (token) {
+        var recaptchaResponse = document.getElementById('recaptchaResponse');
+        recaptchaResponse.value = token;
+    });
 }
