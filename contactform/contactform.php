@@ -36,7 +36,7 @@ $recaptcha = json_decode($recaptcha);
  */
 
 // an email address that will be in the From field of the email.
-$from = 'NSL Contact Form <site@nslug.com>';
+$from = 'NSL Contact Form <site@nsl.ug>';
 
 // an email address that will receive the email with the output of the form
 $sendTo = 'Akbr<kakbr800@gmail.com>';
