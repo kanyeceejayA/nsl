@@ -6,6 +6,14 @@ $(function () {
 
     // $('#contact-form').validator();
 
+    window.addEventListener('load', (event) => {
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6Lfv97AZAAAAADPEzmlwpehcmERSSwnrB-PNpuTn', { action: 'contact' }).then(function (token) {
+                var recaptchaResponse = document.getElementById('recaptchaResponse');
+                recaptchaResponse.value = token;
+            });
+        });
+    });
 
 
 
@@ -17,13 +25,6 @@ $(function () {
      
         e.preventDefault();
 
-        grecaptcha.ready(function () {
-            grecaptcha.execute('6Lfv97AZAAAAADPEzmlwpehcmERSSwnrB-PNpuTn', { action: 'contact' }).then(function (token) {
-                var recaptchaResponse = document.getElementById('recaptchaResponse');
-                recaptchaResponse.value = token;
-            });
-        });
-        
 
         var url = "contactform/contactform.php";
 
@@ -63,7 +64,31 @@ $(function () {
                         $( "#submit" ).addClass( "fail", 450, callbacksubmit() );   
                     }
                 }
-            }
+            },
+            error: function (jqXHR, exception) {
+                var errorText = '';
+                if (jqXHR.status === 0) {
+                    errorText = 'Not connect.\n Verify Network.';
+                } else if (jqXHR.status == 404) {
+                    errorText = 'Requested page not found. [404]';
+                } else if (jqXHR.status == 500) {
+                    errorText = 'Internal Server Error [500].';
+                } else if (exception === 'parsererror') {
+                    errorText = 'Requested JSON parse failed.';
+                } else if (exception === 'timeout') {
+                    errorText = 'Time out error.';
+                } else if (exception === 'abort') {
+                    errorText = 'Ajax request aborted.';
+                } else {
+                    errorText = 'Uncaught Error.\n' + jqXHR.responseText;
+                }
+                // let's compose Bootstrap alert box HTML
+                var alertBox = '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + errorText + '</div>';
+                $( "#submit" ).removeClass( "onclick" );
+                $( "#submit" ).addClass( "fail", 450, callbacksubmit() ); 
+                document.getElementById("messages").innerHTML = alertBox;
+                
+            },
         });
         return false;
     
