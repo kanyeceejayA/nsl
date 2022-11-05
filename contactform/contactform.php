@@ -22,7 +22,7 @@ function url_get_contents ($url) {
 
 // Build POST request:
 $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
-$recaptcha_secret = env('secret');
+$recaptcha_secret = env('recaptcha_secret');
 $recaptcha_response = $_POST['recaptcha_response'];
 
 //SWITCH THIS TO FILE_GET_CONTENTS IF ON LOCALHOST!!!
