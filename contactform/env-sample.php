@@ -2,7 +2,7 @@
 //  Environment sample file by Kanyesigye Akbr - 16 Oct 2018
 
  $variables = [
-      'var_name' => 'var_value'
+      'recaptcha_secret' => 'var_value'
   ];
 
   foreach ($variables as $key => $value) {
