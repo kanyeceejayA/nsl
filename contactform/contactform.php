@@ -25,7 +25,7 @@ $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
 $recaptcha_secret = env('recaptcha_secret');
 $recaptcha_response = $_POST['recaptcha_response'];
 
-// error_log('Akbr the email that came is '.$_POST['email']." and the recaptcha is ".$_POST['recaptcha_response'] );
+error_log('Akbr the email that came is '.$_POST['email']." and the recaptcha is ".$_POST['recaptcha_response'] );
 
 
 //SWITCH THIS TO FILE_GET_CONTENTS IF ON LOCALHOST!!!
