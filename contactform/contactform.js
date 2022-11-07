@@ -68,7 +68,7 @@ $(function () {
             error: function (jqXHR, exception) {
                 var errorText = '';
                 if (jqXHR.status === 0) {
-                    errorText = 'Not connect.\n Verify Network.';
+                    errorText = 'Failed to Connect.\n Please verify your network connection and try again.';
                 } else if (jqXHR.status == 404) {
                     errorText = 'Requested page not found. [404]';
                 } else if (jqXHR.status == 500) {
@@ -80,7 +80,7 @@ $(function () {
                 } else if (exception === 'abort') {
                     errorText = 'Ajax request aborted.';
                 } else {
-                    errorText = 'Uncaught Error.\n' + jqXHR.responseText;
+                    errorText = 'Uncaught Error. \n' + jqXHR.responseText;
                 }
                 // let's compose Bootstrap alert box HTML
                 var alertBox = '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + errorText + '</div>';
