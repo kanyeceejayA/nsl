@@ -44,10 +44,10 @@ $recaptcha = json_decode($recaptcha);
 $from = 'NSL Contact Form <site@nsl.ug>';
 
 // an email address that will receive the email with the output of the form
-$sendTo = 'Akbr<kakbr800@gmail.com>';
+$sendTo = 'NSL Team<info@nsl.ug>';
 
 // subject of the email
-$subject = 'New message from NSL Website: '.$_POST['name'];
+$subject = 'New NSL Site Message : '.$_POST['name'];
 
 // form field names and their translations.
 // array variable name => Text to appear in the email
