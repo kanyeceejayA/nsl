@@ -4,7 +4,7 @@ include('env.php');
 // sleep('10');
 
 function url_get_contents ($url) {
-    if($_SERVER["HTTP_HOST"] == "nimble.local"){
+    if($_SERVER["HTTP_HOST"] == "localhost"){
         return file_get_contents($url);
     }
 	if (!function_exists('curl_init')){
@@ -22,14 +22,19 @@ function url_get_contents ($url) {
 
 // Build POST request:
 $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
-$recaptcha_secret = env('secret');
+$recaptcha_secret = env('recaptcha_secret');
 $recaptcha_response = $_POST['recaptcha_response'];
+
+error_log('Akbr the email that came is '.$_POST['email']." and the recaptcha is ".$_POST['recaptcha_response'] );
+
 
 //SWITCH THIS TO FILE_GET_CONTENTS IF ON LOCALHOST!!!
 //the instruction above isnt needed anymore. updated url_get_contents to account for that. Akbr, 14/07/2020
 // Make and decode POST request:
 $recaptcha = url_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
 $recaptcha = json_decode($recaptcha);
+
+
 
 /*
  *  CONFIGURE EVERYTHING HERE
@@ -39,10 +44,10 @@ $recaptcha = json_decode($recaptcha);
 $from = 'NSL Contact Form <site@nsl.ug>';
 
 // an email address that will receive the email with the output of the form
-$sendTo = 'Akbr<kakbr800@gmail.com>';
+$sendTo = 'NSL Team<info@nsl.ug>';
 
 // subject of the email
-$subject = 'New message from NSL Website: '.$_POST['name'];
+$subject = 'New NSL Site Message : '.$_POST['name'];
 
 // form field names and their translations.
 // array variable name => Text to appear in the email
@@ -74,6 +79,7 @@ try
 
     if($recaptcha->score <= 0.5) throw new \Exception('SP-M45-'.$recaptcha->score);
 
+
             
     $emailText = "New Message\t Score:".$recaptcha->score."\n";
 
@@ -92,7 +98,7 @@ try
     );
     
     // Send email if the code is run on a real server, not localhost.
-    if ($_SERVER["HTTP_HOST"] != "nimble.local") {
+    if ($_SERVER["HTTP_HOST"] != "localhost") {
         mail($sendTo, $subject, $emailText, implode("\n", $headers));
         
     }else{
